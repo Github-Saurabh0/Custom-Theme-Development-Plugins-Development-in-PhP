@@ -6,7 +6,7 @@ This repository is a complete guide and codebase for mastering **custom WordPres
 
 ## Overview
 
-WordPress powers over 40% of the web — and custom development is what sets professionals apart.  
+WordPress powers over 40% of the web, and custom development is what sets professionals apart.  
 This repo is designed for **developers who want to build scalable, secure, and high-performing WordPress solutions** from scratch.
 
 You’ll find:
