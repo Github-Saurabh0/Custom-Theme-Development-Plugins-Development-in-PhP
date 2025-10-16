@@ -21,6 +21,6 @@
             </div>
         </div>
     </footer>
-<script src="templatemo-neural-scripts.js"></script>
+<script src="<?php echo get_bloginfo("template_url")?>/templatemo-neural-scripts.js"></script>
 </body>
 </html>
