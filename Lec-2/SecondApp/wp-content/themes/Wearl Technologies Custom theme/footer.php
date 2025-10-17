@@ -21,6 +21,6 @@
             </div>
         </div>
     </footer>
-<script src="<?php echo get_bloginfo("template_url")?>/templatemo-neural-scripts.js"></script>
+    <?php wp_footer(); ?>
 </body>
 </html>
