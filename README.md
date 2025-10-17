@@ -28,11 +28,11 @@ You’ll find:
 📁 wp-content/
  ┣ 📂 themes/
  ┃ ┗ 📂 custom-theme/
- ┃   ┣ 📜 functions.php
+ ┃   ┣ 📜 functions.php = Most important file for Wp project
+ ┃   ┣ 📜 style.css
  ┃   ┣ 📜 index.php
  ┃   ┣ 📜 header.php
  ┃   ┣ 📜 footer.php
- ┃   ┣ 📜 style.css
  ┃   ┗ 📂 template-parts/
  ┃       ┗ 📜 content.php
  ┣ 📂 plugins/
