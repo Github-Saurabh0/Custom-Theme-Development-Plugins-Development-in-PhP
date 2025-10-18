@@ -31,6 +31,7 @@ You’ll find:
  ┃   ┣ 📜 functions.php = Most important file for Wp project
  ┃   ┣ 📜 style.css
  ┃   ┣ 📜 index.php
+ ┃   ┣ 📜 Page.php = Custom Page reading/Creating
  ┃   ┣ 📜 header.php
  ┃   ┣ 📜 footer.php
  ┃   ┗ 📂 template-parts/
@@ -43,6 +44,10 @@ You’ll find:
  ┃   ┣ 📂 assets/
  ┃   ┗ 📜 readme.txt
 ```
+
+##  Custom Page Preview
+![Preview](Screens\Custompage.png)
+
 
 ---
 
