@@ -46,7 +46,8 @@ You’ll find:
 ```
 
 ##  Custom Page Preview
-![Preview](Screens\Custompage.png)
+![Preview](Custom-Theme-Development-Plugins-Development-in-PhP/Screens
+/Custompage.png)
 
 
 ---
