@@ -11,4 +11,18 @@ function wearl_technologies_custom_theme_scripts(){
 }
 add_action('wp_enqueue_scripts', 'wearl_technologies_custom_theme_scripts');
 
+
+function register_wearl_technologies_theme(){
+// menu register
+    register_nav_menus(
+        array(
+        'primary-menu' => __('Primary Menu'),
+        'footer-menu' => __('Footer Menu')
+        )
+    );
+}
+// attach with action hook
+    add_action("init", "register_wearl_technologies_theme");
+
+
 ?>
