@@ -65,14 +65,16 @@
                 </svg>
                 NEURALGLASS
             </a>
-            <ul class="nav-links">
-                <li><a href="#features">Neural</a></li>
-                <li><a href="#showcase">Matrix</a></li>
-                <li><a href="#timeline">Evolution</a></li>
-                <li><a href="#contact">Connect</a></li>
-                <li><a href="https://example.com" target="_blank" class="external-link">External</a></li>
-</ul>
-            </ul>
+            <?php
+                wp_nav_menu(
+                    array(
+                        'theme_location' => 'primary-menu',
+                        'menu_class' => 'nav-links',
+                        'container' => false,
+                    )
+                );
+            ?>
+
             <div class="mobile-menu-toggle">
                 <div class="hamburger-line"></div>
                 <div class="hamburger-line"></div>
@@ -80,10 +82,14 @@
             </div>
         </nav>
         <div class="mobile-nav">
-            <a href="#features">Neural</a>
-            <a href="#showcase">Matrix</a>
-            <a href="#timeline">Evolution</a>
-            <a href="#contact">Connect</a>
-            <a href="https://example.com" target="_blank" class="external-link">External</a>
+             <?php
+                wp_nav_menu(
+                    array(
+                        'menu' => 'primary-menu',
+                        'menu_class' => 'nav-links',
+                        'container' => false,
+                    )
+                );
+            ?>
         </div>
     </header>
