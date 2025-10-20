@@ -3,16 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo get_bloginfo("name") ?> <?php echo get_bloginfo("description") ?> </title>
+    <title><?php echo get_bloginfo("name") ?> <?php echo get_bloginfo("description") ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
-	
+
     <style>
-       
+    /* Force override conflicting theme styles */
+.mobile-nav {
+    display: none !important;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.08) !important;
+    backdrop-filter: blur(25px) !important;
+    border-radius: 20px !important;
+    position: absolute !important;
+    top: 90px !important;
+    right: 20px !important;
+    padding: 25px 35px !important;
+    z-index: 9999 !important;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.35) !important;
+    transform: translateY(-15px);
+    opacity: 0;
+    transition: all 0.4s ease !important;
+}
+
+/* Show when toggled active */
+.mobile-nav.active {
+    display: flex !important;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Menu Links */
+.mobile-nav .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    text-align: right !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.mobile-nav .nav-links a {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    letter-spacing: 0.5px !important;
+    transition: 0.3s ease !important;
+}
+
+.mobile-nav .nav-links a:hover {
+    color: #ff66c4 !important;
+    transform: translateX(-5px);
+}
+
+/* Slide-in (optional enhancement) */
+@keyframes slideInGlass {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-nav.active {
+    animation: slideInGlass 0.4s ease-out;
+}
+
+
+    /* When JS toggles active class */
+    .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translateY(8px);
+    }
+
+    .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translateY(-8px);
+    }
+
+    /* Hide on desktop */
+    @media (min-width: 768px) {
+        .mobile-menu-toggle,
+        .mobile-nav {
+            display: none !important;
+        }
+    }
     </style>
 </head>
+
 <body>
     <!-- Epic Neural Background -->
     <div class="neural-background"></div>
@@ -65,6 +151,7 @@
                 </svg>
                 NEURALGLASS
             </a>
+
             <?php
                 wp_nav_menu(
                     array(
@@ -81,8 +168,9 @@
                 <div class="hamburger-line"></div>
             </div>
         </nav>
+
         <div class="mobile-nav">
-             <?php
+            <?php
                 wp_nav_menu(
                     array(
                         'menu' => 'primary-menu',
@@ -93,3 +181,7 @@
             ?>
         </div>
     </header>
+
+    <?php wp_footer(); ?>
+</body>
+</html>
