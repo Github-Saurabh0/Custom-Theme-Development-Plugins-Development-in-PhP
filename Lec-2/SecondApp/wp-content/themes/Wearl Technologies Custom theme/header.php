@@ -96,6 +96,13 @@
             display: none !important;
         }
     }
+
+
+    .logo-design img{
+        height: 50px;
+        width: 130px;
+    }
+
     </style>
 </head>
 
@@ -121,7 +128,7 @@
     <!-- Header -->
     <header class="glass">
         <nav>
-            <a href="#home" class="logo">
+            <!-- <a href="#home" class="logo">
                 <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -149,9 +156,22 @@
                         <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
                     </line>
                 </svg>
-                NEURALGLASS
+                WEARL
+            </a> -->
+
+            <!-- Custom logo setup -->
+            <a href="../" class="logo-design">
+             <?php
+                $custom_logo_id = get_theme_mod( 'custom_logo' );
+                $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+                if(has_custom_logo()){
+                   $img = esc_url( $logo[0] );
+                   echo '<img src="' . $img . '" alt="Wearl Technologies Logo" class="logo-image">';
+                }
+              ?>
             </a>
 
+            
             <?php
                 wp_nav_menu(
                     array(
