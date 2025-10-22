@@ -35,6 +35,26 @@
         </div>
     </section>
 
+    <!-- Post Type Area Start -->
+
+<?php
+if ( have_posts() ) :
+    while ( have_posts() ) : the_post(); ?>
+        
+        <a href="<?php echo esc_url( get_the_permalink() ); ?>">
+            <h2 class="post-title"><?php the_title(); ?></h2>
+        </a>
+        <?php the_content(); ?>
+
+    <?php endwhile;
+else :
+    echo '<p>No content found</p>';
+endif;
+?>
+
+<!-- Post Type Area End -->
+
+
     <!-- Section 2: Diagonal Features -->
     <section class="features" id="features">
         <div class="features-container">
