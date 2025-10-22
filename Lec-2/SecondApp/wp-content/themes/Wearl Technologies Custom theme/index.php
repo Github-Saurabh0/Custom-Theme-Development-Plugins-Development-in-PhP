@@ -38,6 +38,7 @@
     <!-- Post Type Area Start -->
 
 <?php
+/*
 if ( have_posts() ) :
     while ( have_posts() ) : the_post(); ?>
         
@@ -50,6 +51,7 @@ if ( have_posts() ) :
 else :
     echo '<p>No content found</p>';
 endif;
+*/
 ?>
 
 <!-- Post Type Area End -->
