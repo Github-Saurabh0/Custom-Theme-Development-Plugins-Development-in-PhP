@@ -40,4 +40,22 @@ function wearl_technologies_custom_theme_logo_setup(){
 
 add_action( 'after_setup_theme', 'wearl_technologies_custom_theme_logo_setup' );
 
+
+// Register Custom Post Type
+
+function register_custom_post_type(){
+    register_post_type('Custom_post', array(
+        'labels' => array(
+            'name' => __('Custom Posts'),
+            'singular_name' => __('Custom_post')
+        ),
+        'public' => true,
+        'show_in_nav_menus' => true,
+        'has_archive' => false,
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'author', 'comments', 'revisions', 'custom-fields'),
+        'menu_icon' => 'dashicons-post-status',
+    ));
+}
+ add_action('init', 'register_custom_post_type');
+
 ?>
