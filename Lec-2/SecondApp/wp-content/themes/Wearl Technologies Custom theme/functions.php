@@ -58,4 +58,22 @@ function register_custom_post_type(){
 }
  add_action('init', 'register_custom_post_type');
 
+
+ //create custom sidebar
+    function wearl_technologies_custom_theme_sidebar(){
+        register_sidebar(
+            array(
+                'name' => __('Widget Area', 'wearl-technologies-custom-theme'),
+                'id' => 'custom-sidebar',
+                'description' => __('A custom sidebar for Wearl Technologies Custom Theme', 'wearl-technologies-custom-theme'),
+                'before_widget' => '<div class="widget %2$s" id="%1$s">',
+                'after_widget' => '</div>',
+                'before_title' => '<h3 class="widget-title">',
+                'after_title' => '</h3>',
+            )
+        );
+    }
+
+add_action('widgets_init', 'wearl_technologies_custom_theme_sidebar');
+
 ?>
