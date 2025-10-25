@@ -619,6 +619,59 @@
      background: rgba(224, 163, 255, 0.08);
      box-shadow: 0 12px 30px rgba(224, 163, 255, 0.2);
 }
+
+/* Section 2: Custom Widget test css Start */
+/* Transparent Glass Effect Box */
+.glass-box {
+  flex: 1;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.15);
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.glass-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.25);
+}
+
+.glass-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-box p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Optional subtle floating animation */
+@keyframes floatGlass {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.glass-box {
+  animation: floatGlass 6s ease-in-out infinite;
+}
+
+/* Section 2: Custom Widget test css  End */
+
 /* Section 2: Diagonal Features */
  .features {
      padding: 150px 0;
