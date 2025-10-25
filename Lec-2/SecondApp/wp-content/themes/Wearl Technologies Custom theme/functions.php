@@ -64,7 +64,7 @@ function register_custom_post_type(){
         register_sidebar(
             array(
                 'name' => __('Primary Sidebar', 'wearl-technologies-custom-theme'),
-                'id' => 'Sidebar-1',
+                'id' => 'sidebar-1',
                 'description' => __('A custom sidebar for Wearl Technologies Custom Theme', 'wearl-technologies-custom-theme'),
                 'before_widget' => '<div class="widget %2$s" id="%1$s">',
                 'after_widget' => '</div>',
@@ -77,7 +77,7 @@ function register_custom_post_type(){
     register_sidebar(
             array(
                 'name' => __('Secondary Sidebar', 'wearl-technologies-custom-theme'),
-                'id' => 'Sidebar-2',
+                'id' => 'sidebar-2',
                 'description' => __('A custom sidebar for Wearl Technologies Custom Theme', 'wearl-technologies-custom-theme'),
                 'before_widget' => '<div class="widget %2$s" id="%1$s">',
                 'after_widget' => '</div>',
