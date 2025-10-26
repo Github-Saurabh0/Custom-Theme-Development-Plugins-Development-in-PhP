@@ -149,7 +149,7 @@ add_action('rest_api_init', function() {
 ```
 ## Custom Sidebar Registration for Wearl Technologies Theme
 
-This feature adds two custom widget areas — Primary Sidebar and Secondary Sidebar — allowing easy widget management through the WordPress dashboard.
+This feature adds two custom widget areas, Primary Sidebar and Secondary Sidebar, allowing easy widget management through the WordPress dashboard.
 
 ## Custom Glass Box Widget Area
 
